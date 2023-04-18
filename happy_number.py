@@ -1,28 +1,25 @@
 class Solution:
     def isHappy(self, n: int) -> bool:
-        current_value = str(n)
-        max_itr = 0
+        visit = set()  # Memory O(n)
 
-        if n == 1:
-            return True
+        while n not in visit:
+            visit.add(n)
+            n = self.sumOfSquares(n)
 
-        while int(current_value) != 1:
-            result = 0
-
-            for i in current_value:
-                result += int(i) ** 2
-
-            if result == 1:
+            if n == 1:
                 return True
-            else:
-                current_value = str(result)
-
-            max_itr += 1
-
-            if max_itr == 50:
-                return False
 
         return False
+
+    def sumOfSquares(self, n: int) -> int:
+        output = 0
+
+        while n:
+            digit = n % 10
+            digit = digit**2
+            output += digit
+            n = n // 10
+        return output
 
 
 solve = Solution()
