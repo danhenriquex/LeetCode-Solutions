@@ -13,3 +13,7 @@ The main goal of this repository is to practice leetcode problems in order to im
 ### 3. https://leetcode.com/problems/longest-common-prefix/
 
 ### 4. https://leetcode.com/problems/happy-number/
+
+## Medium problems
+
+### 1. https://leetcode.com/problems/spiral-matrix/
