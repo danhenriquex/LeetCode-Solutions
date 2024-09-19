@@ -1,4 +1,13 @@
+import os
+import sys
+
+sys.path.append(os.path.dirname(os.path.abspath(__file__)) + "/..")
+from decorators.timer import measure_time
+
+
 class Solution:
+
+    @measure_time
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         dictionary = {}
         size = len(nums)
