@@ -1,4 +1,13 @@
+import os
+import sys
+
+sys.path.append(os.path.dirname(os.path.abspath(__file__)) + "/..")
+from decorators.timer import measure_time
+
+
 class Solution:
+
+    @measure_time
     def topKFrequent(self, nums: list[int], k: int) -> list[int]:
         table: dict = {}
 
@@ -24,6 +33,7 @@ class Solution:
 
         return results
 
+    @measure_time
     def topKFrequentOptimal(self, nums: list[int], k: int) -> list[int]:
         count: dict = {}
         freq: list = [[] for i in range(len(nums) + 1)]
@@ -47,6 +57,7 @@ class Solution:
 if __name__ == "__main__":
     solution = Solution()
     solution.topKFrequentOptimal([1, 1, 5, 5, 5, 3, 3], 2)
-    solution.topKFrequentOptimal([1, 2], 2)
+    solution.topKFrequent([1, 1, 5, 5, 5, 3, 3], 2)
+    solution.topKFrequent([1, 2], 2)
     solution.topKFrequentOptimal([1, 1, 1, 2, 2, 3], 2)
     solution.topKFrequentOptimal([7, 7], 1)
