@@ -2,6 +2,8 @@
 
 The main goal of this repository is to practice leetcode problems in order to improve my knowledge in data structure and algorithms as well as improve my problem solving ability.
 
+The Roadmap comes from the [NeetCode](https://neetcode.io/roadmap) website.
+
 # Challenges list
 
 ## Easy Problems
